@@ -1,9 +1,8 @@
-import { createContext, useEffect, useState } from "react";
-import cookie from 'cookiejs';
-import { message } from "antd";
 import WalletConnectProvider from "@walletconnect/web3-provider";
+import { createContext, useEffect, useState } from "react";
 import { getCookie } from "cookies-next";
 import { providers } from "ethers";
+import cookie from 'cookiejs';
 
 export const Context = createContext();
 export const ContextProvider = ({children}) => {

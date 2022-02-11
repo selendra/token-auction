@@ -41,7 +41,7 @@ function MySel() {
       <div className={styles.card}>
         <div className={styles.container}>
           <div className={styles.portfolio}>
-            <Image src='/sel-token.png' width={44} height={44} alt='' />
+            <Image src='/static/sel-token.png' width={44} height={44} alt='' />
             <div style={{marginLeft: '8px'}}>
               <p>SEL</p>
               <p>$0.03</p>
