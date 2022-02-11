@@ -1,0 +1,35 @@
+name: Deploy Token Auction
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  Token-Auction:
+    name: Production
+    runs-on: ubuntu-latest
+    environment: 
+      name: Production
+      url: 'https://token.selendra.org'
+    steps:
+      - name: Checkout Here
+        uses: actions/checkout@v2
+      - name: Build Production
+        run: |
+          npm ci
+          CI= npm run build
+      - name: Install ssh key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}        
+      - name: Env
+        env:
+          BASH_SECRET: ${{ secrets.BASH_SHELL }}
+        run: |
+          echo "$BASH_SECRET" > ./deploy
+          chmod +x ./deploy
+      - name: Deploying to Production...     
+        run: |
+          ./deploy  

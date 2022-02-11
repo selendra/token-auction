@@ -1,0 +1,86 @@
+.card {
+  max-width: 520px;
+  width: 100%;
+  background: #013F5B;
+  border: .1px solid #03A9F4;
+  border-radius: 6pt;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
+  padding: 24pt;
+  margin: 0 auto;
+} 
+@media screen and (max-width: 520px) {
+  .card {
+    /* margin: 0 20px; */
+  }
+}
+.title {
+  color: #C3ECFE;
+  font-size: 24px;
+  line-height: 40.32px;
+}
+.inputContainer {
+  background: #012D41!important;
+  border-radius: 6pt;
+  padding: 8pt;
+}
+.inputContainer label {
+  color: #85A1AD!important;
+}
+.input {
+  color: #F0F3F5;
+  font-size: 16px;
+  height: 30px;
+  border: none;
+  border-radius: 6pt;
+  background: #012D41;
+  padding: 0;
+}
+.inputAmount {
+  color: #F0F3F5;
+  font-size: 16px;
+  width: 70%;
+  height: 30px;
+  border: none;
+  border-radius: 6pt;
+  background: #012D41;
+  padding: 0;
+}
+.input:focus,
+.inputAmount:focus {
+  box-shadow: none !important;
+}
+.btn {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 6pt;
+  color: #F0F3F5;
+  background: rgb(237,21,118);
+  background: linear-gradient(90deg, rgba(237,21,118,1) 0%, rgba(240,66,144,1) 100%);
+  transition: 1s all;
+}
+.btn:hover, 
+.btn:active,
+.btn:focus {
+  color: #F0F3F5;
+  background: rgb(237,21,118);
+  background: linear-gradient(90deg, rgba(237,21,118,1) 80%, rgba(240,66,144,1) 100%);
+}
+.subtitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+.info {
+  max-width: 520px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+.info h2 {
+  color: #5ECBFD;
+}
+.info p {
+  font-size: 16px;
+}
+.info a {
+  color: #2BBBFC;
+}

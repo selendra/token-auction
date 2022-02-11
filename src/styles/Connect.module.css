@@ -1,0 +1,45 @@
+.btn {
+  width: 200px;
+  height: 40px;
+  color: #F0F3F5;
+  font-weight: 500;
+  border: 1px solid #5ECBFD;
+  border-radius: 6pt;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
+  transition: border .2s!important;
+}
+@media only screen and (max-width: 767px) {
+  .btn {
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .btn {
+    width: 110px;
+  }
+}
+.btn:hover {
+  color: #5ECBFD;
+  border: 2px solid #5ECBFD;
+}
+.wallet {
+  cursor: pointer;
+}
+.wallet:hover {
+  opacity: 0.6;
+}
+.modal .ant-modal-header {
+  border-radius: 20px 20px 0 0!important;
+}
+.menu {
+  background: #02628D;
+  border: 1px solid #5ECBFD;
+  border-radius: 6pt;
+}
+.menuItem {
+  color: #F0F3F5;
+}
+.menuItem:hover {
+  opacity: 0.8;
+  background: #02628D;
+}

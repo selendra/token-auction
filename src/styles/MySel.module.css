@@ -1,0 +1,30 @@
+.card {
+  max-width: 520px;
+  width: 100%;
+  background: #013F5B;
+  border: .1px solid #03A9F4;
+  border-radius: 6pt;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15);
+  padding: 16pt;
+  margin: 0 auto;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container div:nth-child(2) p:nth-child(1) {
+  font-size: 18px;
+  font-weight: 800;
+}
+.portfolio {
+  display: flex;
+  align-items: center;
+}
+.portfolio img {
+  margin-right: 8pt;
+}
+.portfolio div p:nth-child(1) {
+  font-size: 18px;
+  font-weight: 800;
+}
