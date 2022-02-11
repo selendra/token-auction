@@ -2,9 +2,9 @@
   "name": "token-sale",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next start -p 8000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8000",
     "lint": "next lint"
   },
   "dependencies": {
