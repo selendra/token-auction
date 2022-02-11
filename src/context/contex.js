@@ -17,7 +17,7 @@ export const ContextProvider = ({children}) => {
 
   async function connectMetamask() {
     const { ethereum } = window;
-    if(!ethereum) return message.error('Metamask not detected!');
+    if(!ethereum) return;
     try {
       await window.ethereum
         .request({ method: 'eth_requestAccounts' })

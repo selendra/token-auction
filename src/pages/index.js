@@ -97,14 +97,14 @@ export default function Home() {
                 <Row align='middle' justify='space-between'>
                   <Input className={styles.inputAmount} placeholder='' value={amount} onChange={(e) => setAmount(e.target.value)} />
                   <Row>
-                    <Image src='/static/usdt.png' width={22} height={22} alt='' /><span style={{color: '#85A1AD', marginLeft: '8px'}}>USDT</span>
+                    <Image src='/usdt.png' width={22} height={22} alt='' /><span style={{color: '#85A1AD', marginLeft: '8px'}}>USDT</span>
                   </Row>
                 </Row>
               </Form.Item>
               {amount &&
                 <>
                   <center style={{marginBottom: '20px'}}>
-                    <Image src='/static/down.png' width={22} height={22} alt='' />
+                    <Image src='/down.png' width={22} height={22} alt='' />
                   </center>
                   <Spin spinning={spinning} delay={500}>
                     <Form.Item className={styles.inputContainer} label='To (estimated)'>

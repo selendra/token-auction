@@ -43,10 +43,10 @@ function Connect() {
           >
             <Row span={12} justify="center">
               <Col onClick={() => connectMetamask()}>
-                <Image className={styles.wallet} src='/static/metamask.webp' alt='' width='44' height='44' />
+                <Image className={styles.wallet} src='/metamask.webp' alt='' width='44' height='44' />
               </Col>
               <Col offset={4} onClick={() => connectTrust()}>
-                <Image className={styles.wallet} src='/static/trustwallet.png' alt='' width='44' height='44' />
+                <Image className={styles.wallet} src='/trustwallet.png' alt='' width='44' height='44' />
               </Col>
             </Row>
           </Modal>

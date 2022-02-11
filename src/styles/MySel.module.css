@@ -21,9 +21,6 @@
   display: flex;
   align-items: center;
 }
-.portfolio img {
-  margin-right: 8pt;
-}
 .portfolio div p:nth-child(1) {
   font-size: 18px;
   font-weight: 800;
