@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import styles from '@/styles/Header.module.css';
-import { Col, Drawer, Row } from 'antd';
-import Connect from './Connect';
-import Link from 'next/link';
 import { useState } from 'react';
-import logo from '../public/static/logo.png'
+import { Col, Drawer, Row } from 'antd';
+import Image from 'next/image';
+import Link from 'next/link';
+import Connect from './Connect';
+import logo from '../public/static/logo.png';
+import menu from '../public/static/menu.svg';
+import styles from '@/styles/Header.module.css';
 
 function Header() {
   const [drawer, setDrawer] = useState(false);
@@ -37,12 +38,12 @@ function Header() {
           </Col>
           <Col xs={4} sm={4} md={0} lg={0} xl={0}>
             <Row justify='end'>
-              <Image src='/static/menu.svg' alt='' width={30} height={30} onClick={() => setDrawer(true)}/>
+              <Image src={menu} alt='' width={30} height={30} onClick={() => setDrawer(true)}/>
             </Row>
           </Col>
         </Row>
         <Drawer className={styles.drawer} bodyStyle={styling} width={320} headerStyle={styling} closable={false} placement="right" onClose={() => setDrawer(!drawer)} visible={drawer}>
-          <Image src='/static/logo.png' alt='' width={110} height={50} />
+          <Image src={logo} alt='' width={110} height={50} />
           <div className={styles.navItem}>
             <Link href='/' passHref>
               <p className={styles.nav}>Home</p>
