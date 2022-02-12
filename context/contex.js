@@ -55,11 +55,7 @@ export const ContextProvider = ({children}) => {
   }
 
   useEffect(() => {
-    if(isTrust) {
-      connectTrust();
-    } else {
-      connectMetamask();
-    }
+    isTrust ? connectTrust() : connectMetamask();
   },[isTrust])
 
   return (

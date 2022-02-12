@@ -1,12 +1,14 @@
 import { ethers } from 'ethers'
 import { useState, useContext, useEffect } from 'react'
 import { Button, Form, Input, message, Row, Spin } from 'antd'
-import { Context } from '../context/contex'
-import { Contract } from '../utils/useContract'
-import { Allowance } from '../utils/getAllowance'
-import { Signer } from '../utils/getSigner'
-import styles from '../styles/Home.module.css'
+import { Context } from '@/context/contex'
+import { Contract } from '@/utils/useContract'
+import { Allowance } from '@/utils/getAllowance'
+import { Signer } from '@/utils/getSigner'
+import styles from '@/styles/Home.module.css'
 import Image from 'next/image'
+import usdt from '../public/static/usdt.png'
+import down from '../public/static/down.png'
 
 export default function Home() {
   const { isTrust } = useContext(Context);
@@ -15,8 +17,6 @@ export default function Home() {
   const [amount, setAmount] = useState('');
   const [address, setAddress] = useState('');
   const [allowance, setAllowance] = useState('');
-  // const [hash, setHash] = useState('');
-  // const [txs, setTxs] = useState([]);
 
   async function approve() {
     try {
@@ -97,14 +97,14 @@ export default function Home() {
                 <Row align='middle' justify='space-between'>
                   <Input className={styles.inputAmount} placeholder='' value={amount} onChange={(e) => setAmount(e.target.value)} />
                   <Row>
-                    <Image src='/static/usdt.png' width={22} height={22} alt='' /><span style={{color: '#85A1AD', marginLeft: '8px'}}>USDT</span>
+                    <Image src={usdt} width={22} height={22} alt='' /><span style={{color: '#85A1AD', marginLeft: '8px'}}>USDT</span>
                   </Row>
                 </Row>
               </Form.Item>
               {amount &&
                 <>
                   <center style={{marginBottom: '20px'}}>
-                    <Image src='/static/down.png' width={22} height={22} alt='' />
+                    <Image src={down} width={22} height={22} alt='' />
                   </center>
                   <Spin spinning={spinning} delay={500}>
                     <Form.Item className={styles.inputContainer} label='To (estimated)'>

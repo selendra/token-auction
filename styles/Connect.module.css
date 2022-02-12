@@ -1,0 +1,45 @@
+.btn {
+  width: 200px;
+  height: 40px!important;
+  color: #F0F3F5!important;
+  font-weight: 500!important;
+  border: 1px solid #5ECBFD!important;
+  border-radius: 6pt!important;
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.15)!important;
+  transition: border .2s!important;
+}
+@media only screen and (max-width: 767px) {
+  .btn {
+    width: 150px!important;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .btn {
+    width: 110px!important;
+  }
+}
+.btn:hover {
+  color: #5ECBFD;
+  border: 2px solid #5ECBFD;
+}
+.wallet {
+  cursor: pointer;
+}
+.wallet:hover {
+  opacity: 0.6;
+}
+.modal .ant-modal-header {
+  border-radius: 20px 20px 0 0!important;
+}
+.menu {
+  background: #02628D!important;
+  border: 1px solid #5ECBFD!important;
+  border-radius: 6pt!important;
+}
+.menuItem {
+  color: #F0F3F5!important;
+}
+.menuItem:hover {
+  opacity: 0.8!important;
+  background: #02628D!important;
+}

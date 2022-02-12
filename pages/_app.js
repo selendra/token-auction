@@ -1,8 +1,8 @@
 import Head from 'next/head'
-import 'antd/dist/antd.css'
-import '../styles/globals.css'
+import Header from '@/components/Header'
 import { ContextProvider } from '../context/contex'
-import Header from '../components/Header'
+import 'antd/dist/antd.css'
+import '@/styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   if(process.browser) {

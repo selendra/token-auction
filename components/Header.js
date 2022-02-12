@@ -1,15 +1,15 @@
 import Image from 'next/image';
-import styles from '../styles/Header.module.css';
+import styles from '@/styles/Header.module.css';
 import { Col, Drawer, Row } from 'antd';
 import Connect from './Connect';
 import Link from 'next/link';
 import { useState } from 'react';
+import logo from '../public/static/logo.png'
 
 function Header() {
   const [drawer, setDrawer] = useState(false);
   const styling = {
     background: 'rgb(1,45,65)',
-    // background: 'linear-gradient(49deg, rgba(1,45,65,1) 0%, rgba(2,133,191,1) 100%)'
   }
 
   return ( 
@@ -17,7 +17,7 @@ function Header() {
       <div className={styles.header}>
         <Row justify='space-between' align='middle' style={{height: '100%'}}>
           <Col span={6}>
-            <Image src='/static/logo.png' alt='' width={110} height={50} />
+            <Image src={logo} alt='' width={110} height={50} />
           </Col>
           <Col xs={0} sm={0} md={6} lg={6} xl={6}>
             <Row justify='center'>

@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
 import Image from "next/image";
 import { Button, Col, Dropdown, Menu, Modal, Row } from "antd";
-import { Context } from "../context/contex";
-import styles from '../styles/Connect.module.css';
+import { Context } from "@/context/contex";
+import styles from '@/styles/Connect.module.css';
+import metamask from '../public/static/metamask.webp';
+import trustwallet from '../public/static/trustwallet.png';
 
 function Connect() {
   const { connectMetamask, connectTrust, account, disconnect } = useContext(Context);
@@ -32,26 +34,22 @@ function Connect() {
         <Button type='ghost' className={styles.btn} onClick={() => setModal(true)}>Connect</Button>
       }
       
-      <div suppressHydrationWarning={true}>
-        {process.browser && 
-          <Modal
-            title='Choose wallet'
-            visible={modal}
-            footer=''
-            onCancel={() => setModal(false)}
-            className={styles.modal}
-          >
-            <Row span={12} justify="center">
-              <Col onClick={() => connectMetamask()}>
-                <Image className={styles.wallet} src='/static/metamask.webp' alt='' width='44' height='44' />
-              </Col>
-              <Col offset={4} onClick={() => connectTrust()}>
-                <Image className={styles.wallet} src='/static/trustwallet.png' alt='' width='44' height='44' />
-              </Col>
-            </Row>
-          </Modal>
-        }
-      </div>
+      <Modal
+        title='Choose wallet'
+        visible={modal}
+        footer=''
+        onCancel={() => setModal(false)}
+        className={styles.modal}
+      >
+        <Row span={12} justify="center">
+          <Col onClick={() => connectMetamask()}>
+            <Image className={styles.wallet} src={metamask} alt='' width='44' height='44' />
+          </Col>
+          <Col offset={4} onClick={() => connectTrust()}>
+            <Image className={styles.wallet} src={trustwallet} alt='' width='44' height='44' />
+          </Col>
+        </Row>
+      </Modal>
     </div>
   );
 }
