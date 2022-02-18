@@ -28,9 +28,6 @@
 .wallet:hover {
   opacity: 0.6;
 }
-.modal .ant-modal-header {
-  border-radius: 20px 20px 0 0!important;
-}
 .menu {
   background: #02628D!important;
   border: 1px solid #5ECBFD!important;

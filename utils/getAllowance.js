@@ -24,6 +24,7 @@ export async function Allowance(isTrust, tokenAddress) {
     accounts = await provider.listAccounts();
     signer = provider.getSigner(accounts[0]);
   }
+  
   const contract = new ethers.Contract(tokenAddress, abi, signer);
   const allowance = await contract.allowance(accounts[0], contractAddress);
 

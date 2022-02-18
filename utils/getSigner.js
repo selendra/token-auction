@@ -1,3 +1,4 @@
+import WalletConnectProvider from "@walletconnect/web3-provider";
 import { ethers, providers } from "ethers";
 
 export async function Signer(isTrust) {

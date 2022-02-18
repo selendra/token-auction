@@ -1,11 +1,11 @@
+import Image from 'next/image';
 import { ethers } from 'ethers';
 import { useContext, useEffect, useState } from 'react';
-import { Context } from '../context/contex';
-import styles from '../styles/MySel.module.css';
-import abi from '../abis/abi.json';
 import { Spin } from 'antd';
-import Image from 'next/image';
-import sel from '../public/static/sel-token.png'
+import { Context } from '../context/contex';
+import abi from '../abis/abi.json';
+import sel from '../public/static/sel-token.png';
+import styles from '../styles/MySel.module.css';
 
 function MySel() {
   const { account } = useContext(Context);

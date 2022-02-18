@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
 import Image from "next/image";
+import { useContext, useState } from "react";
 import { Button, Col, Dropdown, Menu, Modal, Row } from "antd";
 import { Context } from "@/context/contex";
 import styles from '@/styles/Connect.module.css';
-import metamask from '../public/static/metamask.webp';
-import trustwallet from '../public/static/trustwallet.png';
+import metamask from '@/public/static/metamask.png';
+import trustwallet from '@/public/static/trustwallet.png';
 
 function Connect() {
   const { connectMetamask, connectTrust, account, disconnect } = useContext(Context);
@@ -12,8 +12,8 @@ function Connect() {
 
   const menu = (
     <Menu className={styles.menu}>
-      <Menu.Item key="0" className={styles.menuItem}>
-        <span onClick={disconnect}>Disconnect</span>
+      <Menu.Item key="0" className={styles.menuItem} onClick={disconnect}>
+        <span>Disconnect</span>
       </Menu.Item>
     </Menu>
   );

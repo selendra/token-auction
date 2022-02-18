@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import { Col, Drawer, Row } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Col, Drawer, Row } from 'antd';
 import Connect from './Connect';
-import logo from '../public/static/logo.png';
-import menu from '../public/static/menu.svg';
+import logo from '@/public/static/logo.png';
+import menu from '@/public/static/menu.svg';
 import styles from '@/styles/Header.module.css';
 
 function Header() {
@@ -18,7 +18,9 @@ function Header() {
       <div className={styles.header}>
         <Row justify='space-between' align='middle' style={{height: '100%'}}>
           <Col span={6}>
-            <Image src={logo} alt='' width={110} height={50} />
+            {/* <Link href='/' passHref> */}
+              <Image src={logo} alt='' width={110} height={50} />
+            {/* </Link> */}
           </Col>
           <Col xs={0} sm={0} md={6} lg={6} xl={6}>
             <Row justify='center'>
